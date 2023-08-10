@@ -11,7 +11,7 @@ public class Win : UICanvas
         LevelManager.Instance.OnReset();
         LevelManager.Instance.LoadLevel(LevelManager.Instance.lvIndex);
         LevelManager.Instance.OnInit();
-        UIManager.Instance.OpenUI<GamePlay>();
+        UIManager.Instance.OpenUI<GamePlay>().textMeshPro.text = "Level " + (LevelManager.Instance.lvIndex + 1);
         LevelManager.Instance.OnStartGame();
         UIManager.Instance.CloseUI<Win>();
     }
@@ -20,7 +20,7 @@ public class Win : UICanvas
         LevelManager.Instance.OnReset();
         LevelManager.Instance.LoadLevel(LevelManager.Instance.lvIndex + 1);
         LevelManager.Instance.OnInit();
-        UIManager.Instance.OpenUI<GamePlay>();
+        UIManager.Instance.OpenUI<GamePlay>().textMeshPro.text = "Level " + (LevelManager.Instance.lvIndex + 1);
         LevelManager.Instance.OnStartGame();
         UIManager.Instance.CloseUI<Win>();
     }
