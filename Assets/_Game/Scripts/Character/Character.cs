@@ -33,7 +33,7 @@ public class Character : ColorObject
             {
                 brick.OnDespawn();
                 AddBrick();
-                Destroy(other.gameObject);
+                SimplePool.Despawn(brick);
             }
         }
     }
@@ -88,7 +88,7 @@ public class Character : ColorObject
     {
         foreach (var brick in bricks)
         {
-            Destroy(brick.gameObject);
+            SimplePool.Despawn(brick);
         }
         bricks.Clear();
     }

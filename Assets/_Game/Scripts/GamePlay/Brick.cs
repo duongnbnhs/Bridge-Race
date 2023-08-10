@@ -5,7 +5,7 @@ using UnityEngine;
 public class Brick : ColorObject
 {
     public Stage stage;
-    public void OnDespawn()
+    public override void OnDespawn()
     {
         stage.AddEmptyPoint(this);
     }
